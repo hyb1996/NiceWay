@@ -2,6 +2,9 @@
 <resources>
     <color name="colorPrimary">#03a9f4</color>
     <color name="colorPrimaryDark">#0288D1</color>
-    <color name="colorAccent">#FF5252</color>
-    <color name="color_divider">#eaeaea</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="colorBottomBarInactive">#9d9d9d</color>
+    <color name="colorBottomBarActive">@color/colorPrimary</color>
+    <color name="colorPostActionInactive">#999ead</color>
+    <color name="colorDivider">#eff0f7</color>
 </resources>
