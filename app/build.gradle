@@ -15,7 +15,7 @@ android {
         niceway {
             keyAlias 'niceway'
             keyPassword '77777777'
-            storeFile file('C:/Users/Stardust/Documents/AndroidProjects/Zewei/keystore.jks')
+            storeFile file('../keystore.jks')
             storePassword '77777777'
 
         }
@@ -77,6 +77,8 @@ dependencies {
     compile('com.jakewharton:butterknife:8.6.0', {
         exclude group: 'com.android.support'
     })
+    compile 'com.linsea:opendanmaku:1.0.0@aar'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
     compile 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.github.hyb1996:EasyReflect:1.1.0'
 }

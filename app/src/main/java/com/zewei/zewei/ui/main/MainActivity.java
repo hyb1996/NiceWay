@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.zewei.zewei.R;
 import com.zewei.zewei.ui.main.discovery.DiscoveryFragment;
 import com.zewei.zewei.ui.main.discovery.DiscoveryFragment_;
+import com.zewei.zewei.ui.main.map.MapFragment;
 import com.zewei.zewei.ui.main.me.MeFragment_;
 import com.zewei.zewei.ui.main.map.MapFragment_;
 import com.zewei.zewei.ui.main.search.SearchFragment_;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     LinearLayout mBottomBar;
 
     private int mSelectedItem = 0;
+    private FragmentPagerAdapterBuilder.StoredFragmentPagerAdapter mPageAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,15 +53,25 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     @AfterViews
     void setupViews() {
-        mViewPager.setAdapter(new FragmentPagerAdapterBuilder(this)
+        mPageAdapter = new FragmentPagerAdapterBuilder(this)
                 .add(new MapFragment_(), R.string.main_page)
                 .add(new DiscoveryFragment_(), R.string.discovery)
                 .add(new SearchFragment_(), R.string.search)
                 .add(new MeFragment_(), R.string.me)
-                .build());
+                .build();
+        mViewPager.setAdapter(mPageAdapter);
         mViewPager.addOnPageChangeListener(this);
         setupBottomBar();
         onPageSelected(0);
+    }
+
+    @Override
+    public void onBackPressed() {
+        MapFragment fragment = (MapFragment) mPageAdapter.getStoredFragment(0);
+        if (fragment != null && fragment.onBackPressed()) {
+            return;
+        }
+        super.onBackPressed();
     }
 
     void setupBottomBar() {

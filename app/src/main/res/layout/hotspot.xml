@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:paddingRight="10dp"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#29b6f6"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        tools:text="1"/>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#121419"
+        android:textSize="16sp"
+        tools:text="热点内容"/>
+
+    <TextView
+        android:id="@+id/heat"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:textColor="#939393"
+        android:textSize="12sp"
+        tools:text="488856"/>
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/tag_background"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        tools:text="热"/>
+</LinearLayout>

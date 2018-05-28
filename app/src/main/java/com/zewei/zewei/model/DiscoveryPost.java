@@ -134,7 +134,7 @@ public class DiscoveryPost {
     }
 
 
-    private static String readInputStream(InputStream stream) throws IOException {
+    static String readInputStream(InputStream stream) throws IOException {
         byte[] data = new byte[stream.available()];
         stream.read(data);
         stream.close();

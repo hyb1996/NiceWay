@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NiceWay</string>
+    <string name="app_name">奶思Way</string>
     <string name="ok">确定</string>
     <string name="settings">设置</string>
     <string name="like">喜欢</string>
@@ -17,4 +17,9 @@
     <string name="home_page">主页</string>
     <string name="posts">动态</string>
     <string name="gallery">相册</string>
+    <string name="hot_search">热搜榜</string>
+    <string name="friends_search">好友搜</string>
+    <string name="near_search">附近搜</string>
+    <string name="selection_search">精选搜</string>
+    <string name="search_hint">实时热点，每分钟更新一次</string>
 </resources>
